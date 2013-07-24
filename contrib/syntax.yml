@@ -1,5 +1,5 @@
 ruby:
-  ext: ['.rb']
+  ext: ['.rb', '.rake', '.feature']
   after: ['^#!']
   comment:
     open:   '#\n'
@@ -46,7 +46,7 @@ javacript:
     prefix: ' * '
 
 css:
-  ext: ['.css']
+  ext: ['.css', '.scss']
   comment:
     open:   '/*\n'
     close:  ' */\n\n'
