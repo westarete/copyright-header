@@ -1,3 +1,4 @@
+# encoding: UTF-8
 #
 # Copyright Header - A utility to manipulate copyright headers on source code files
 # Copyright (C) 2012 Erik Osterman <e@osterman.com>
@@ -127,7 +128,7 @@ module CopyrightHeader
     end
 
     def has_copyright?(lines = 10)
-      @contents.split(/\n/)[0..lines].select { |line| line =~ /(?!class\s+)([Cc]opyright|[Ll]icense)\s/ }.length > 0
+      @contents.split(/\n/)[0..lines].select { |line| line =~ /(?!class\s+)(©|\([Cc]\)|[Cc]opyright|[Ll]icense)\s/ }.length > 0
     end
   end
 
