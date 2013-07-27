@@ -80,11 +80,6 @@ module CopyrightHeader
             @options[:remove_path] = path
           end
 
-          @options[:guess_extension] ||= false
-          opts.on( '-g', '--guess-extension', 'Use the GitHub Linguist gem to guess the extension of the source code when no extension can be determined (experimental).' ) do 
-            @options[:guess_extension] = true
-          end
-
           @options[:syntax] ||= @options[:base_path] + '/contrib/syntax.yml'
           opts.on( '-c', '--syntax FILE', 'Syntax configuration file' ) do |path|
             @options[:syntax] = path
